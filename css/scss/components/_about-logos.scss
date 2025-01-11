@@ -1,0 +1,70 @@
+.about-logos{   
+    .al{
+        &-wrap{
+            margin-left: rem(-15px);
+            margin-right: rem(-15px);
+            width: calc(100% + 30px);
+            align-items: center;
+            @include respond-below(lg){
+                margin-left: rem(-12px);
+                margin-right: rem(-12px);
+                width: calc(100% + 24px);
+            }
+        }
+        &-logo {
+            min-width: rem(100px);
+            flex: auto;
+            padding-right: rem(15px);
+            padding-left: rem(15px);
+            margin-bottom: rem(30px);
+            @include respond-below(lg){
+                text-align: center;
+                min-width: auto;
+                width: 25%;
+                padding-right: rem(12px);
+                padding-left: rem(12px);
+            }
+            img {
+                @include respond-below(sm){
+                    height: rem(35px);
+                }
+            }
+        }
+    }
+}
+
+// /* Target Safari 3.1 to 6.0 */
+// @media screen and (-webkit-min-device-pixel-ratio:0) {
+//     /* Safari specific styles here */
+//     .about-logos{   
+//         .al{
+//             &-logo {
+//                 img {
+//                     @include respond-below(sm){
+//                         // height: rem(35px);
+//                         height: auto;
+//                         width: 100%;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// /* Target Safari 7.0+ */
+// _::-webkit-full-page-media, _:future, :root .safari_only {
+//     /* Safari specific styles here */
+//     .about-logos{   
+//         .al{
+//             &-logo {
+//                 img {
+//                     @include respond-below(sm){
+//                         // height: rem(35px);
+//                         height: auto;
+//                         width: 100%;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

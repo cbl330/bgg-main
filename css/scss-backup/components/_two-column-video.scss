@@ -1,0 +1,25 @@
+.two-column-video{
+    .tcv-wrap{
+        display: block;
+        position: relative;
+        padding-top: aspect-ratio(525, 525);
+        border: 1px solid $gray;
+        box-shadow: rem(10px) rem(15px) rem(35px) 0 rgba($black, 15%);
+        @include imgFit();
+        &::after{
+            @include icon('\e90c');
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: rem(47px);
+            color: $white;
+            transition: 0.3s;
+        }
+        &:hover, &:focus {
+            &:after {
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+        }
+    }
+}

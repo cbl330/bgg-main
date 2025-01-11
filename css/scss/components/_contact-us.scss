@@ -1,0 +1,114 @@
+.contact-us{
+    > .container > .row {
+        @include respond-below(lg) {
+            flex-direction: column-reverse;
+        }
+    }
+    strong{
+		display: block;
+		margin-bottom: rem(4px);
+    }
+    .cu{
+        &-title{
+            margin-bottom: rem(18px);
+            @include respond-below(xl) {
+				font-size: rem(14px);
+			}
+			@include respond-below(md) {
+				margin-bottom: rem(12px);
+			}
+		}
+		&-left {
+            &-line {
+                border-bottom: 1px solid $gray;
+            }
+			address{
+                font-style: normal;
+                @include respond-below(xl) {
+                    font-size: rem(14px);
+                }
+			}
+			&-block {
+                margin-bottom: rem(15px);
+                @include respond-below(xl) {
+                    font-size: rem(14px);
+                }
+				i {
+					font-size: rem(19px);
+					margin-right: rem(15px);
+					margin-top: rem(2px);
+					@include respond-below(lg){
+						font-size: rem(16px);
+						margin-right: rem(10px);
+					}
+                }
+                a{
+                    color: $gray-800;
+                    text-decoration: none;
+                    &:hover, &:focus {
+                        color: $blue;
+                        text-decoration: underline;
+                    }
+                }
+			}
+        }
+        &-social{
+            @include respond-below(xl) {
+                display: flex;
+                justify-content: space-between;
+            }
+			ul{
+                padding: 0;
+				margin: 0 rem(-12px);
+				@include respond-below(sm) {
+					margin: 0 rem(-10px);
+				}
+			}
+			li {
+                padding: 0 rem(12px);
+                margin-bottom: rem(10px);
+				list-style: none;
+				@include respond-below(sm) {
+					padding: 0 rem(10px);
+				}
+			}
+			a {
+                font-size: rem(23px);
+                text-decoration: none;
+				@include respond-below(sm) {
+					font-size: rem(18px);
+				}
+			}
+        }
+        &-form{
+            &-wrap {
+                background-color: rgba($white, 85%);
+                backdrop-filter: blur(25px);
+                box-shadow: rem(10px) rem(15px) rem(35px) rgba($black, 15%);
+                border: 1px solid $gray;
+                height: 100%;
+            }
+        }
+        // &-msg {
+        //     height: 100%;
+        //     i {
+        //         display: block;
+        //         color: $green;
+        //         font-size: rem(41px);
+        //         margin-bottom: rem(25px);
+        //     }
+        // }
+    }
+
+    .cu-content-container {
+        @include respond-below(md) {
+            order: 2
+        }
+    }
+
+    .cu-form-container {
+        @include respond-below(md) {
+            order: 1
+        }
+    }
+}

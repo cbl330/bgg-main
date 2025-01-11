@@ -1,0 +1,243 @@
+.bgld-new-upload-form {
+	opacity: 0;
+	padding: 3em;
+	background-color: #ffffff;
+	animation: 1s linear forwards bgld-new-upload-form-fade-in;
+}
+@keyframes bgld-new-upload-form-fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.bgld-complete {
+	text-align: center;
+	position: relative;
+	width: 60%;
+	margin: 0 auto;
+}
+.bgld-new-upload-form form .bgld-complete {
+	width: 100%;
+}
+.bgld-complete:before {
+	content: '';
+	position: absolute;
+	border: 1px solid #e6bc2b;
+	width: 100%;
+	top: 11px;
+	margin-right: 19px;
+	left: 0;
+}
+.bgld-purchase {
+	padding-bottom: 2em;
+}
+.bgld-purchase h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold !important;
+	color: #936a18;
+	letter-spacing: 1px;
+	padding-bottom: 1em;
+	font-family: "PT Sans Narrow", sans-serif;
+}
+.bgld-purchase svg {
+	color: #e6bc2b;
+	font-size: 27px;
+	position: relative;
+	z-index: 9;
+	padding: 0 18px;
+	background-color: #ffffff;
+	display: inline-block;
+	height: 1em;
+	overflow: visible;
+	vertical-align: -0.125em;
+}
+.bgld-new-upload-form form {
+	max-width: 60%;
+	margin: auto;
+}
+.bgld-new-upload-form h4 {
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.bgld-new-upload-form label {
+	display: flex;
+	cursor: pointer;
+	font-size: 1em;
+	margin-bottom: 5px;
+}
+.bgld-new-upload-form input[type="radio"] {
+	opacity: 0;
+	pointer-events: none;
+}
+.bgld-new-upload-form input[type="radio"] + span {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	user-select: none;
+	padding-left: 25px;
+}
+.bgld-new-upload-form input[type="radio"] + span:before,
+.bgld-new-upload-form input[type="radio"] + span:after {
+	content: '';
+	border: 0 solid #e4a933;
+	box-shadow: 0 0 1px 1px #cccccc;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 7px 4px 4px;
+	width: 12px;
+	height: 12px;
+	z-index: 0;
+}
+.bgld-new-upload-form input[type="radio"]:checked + span:before {
+	border: 1px solid transparent;
+	box-shadow: 0 0 1px 1px #cccccc;
+}
+.bgld-new-upload-form input[type="radio"]:checked + span:after {
+	background-color: #e4a933;
+}
+.bgld-new-upload-form input[type="text"] {
+	display: block;
+	width: 100%;
+	font-size: 18px;
+	border: 1px solid #333;
+	border-radius: 3px;
+	box-shadow: none;
+	border-image: none;
+	padding: 10px;
+}
+.bgld-form-div {
+	margin-bottom: 2em;
+}
+.bgld-new-upload-form input[name="purchase-info-submit"] {
+	background: #e4a933;
+	color: #ffffff;
+	padding: 14px 66px;
+	font-size: 22px;
+	text-decoration: none;
+	font-weight: bold;
+	box-shadow: 0 5px 0 1px #c38b1b;
+	border-radius: 4px;
+	border: 1px solid #e4a933;
+	transition: all 0.3s;
+}
+.bgld-new-upload-form input[name="purchase-info-submit"]:hover {
+	color: #e4a933;
+	background-color: #ffffff;
+	border: 1px solid #e4a933;
+}
+.bgld-form-div:last-child {
+	margin-bottom: 0;
+}
+.bgld-form-div:last-child > div {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+.bgld-form-div:last-child p {
+	margin-bottom: 0;
+	padding: 1em;
+	line-height: 1.2em;
+	font-style: italic;
+}
+.bgld-form-file-upload {
+	position: relative;
+	height: 350px;
+	background-color: #faf8f2;
+	border-radius: 3px;
+	transition: all 0.3s;
+	margin-bottom: 15px;
+}
+.bgld-new-upload-form input[type="file"] {
+	position: relative;
+	z-index: 2;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.bgld-form-file-upload:after {
+	position: absolute;
+	content: 'Attach Identification';
+	border: 1px solid #c8c6c1;
+	padding: 12px 45px;
+	left: 50%;
+	bottom: 2em;
+	color: #9f9d97;
+	cursor: pointer;
+	font-size: 19px;
+	transform: translateX(-50%);
+	font-weight: bold;
+	border-radius: 4px;
+	min-width: 140px;
+	text-align: center;
+	white-space: nowrap;
+}
+.bgld-form-file-upload:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 150px;
+	top: 50%;
+	transform: translateY(-60%);
+	background-image: url(https://birchgoldgroup.wpengine.com/wp-content/uploads/2019/02/cash-purchase-desktop2.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.bgld-form-file-upload-address:before {
+	height: 200px;
+}
+.bgld-form-file-upload-address:before {
+	background-image: url(img/address.png);
+}
+.bgld-form-file-upload-address:after {
+	content: 'Attach Proof of Current Address';
+}
+.bgld-form-file-upload-trust:before {
+	background-image: url(img/documents.png);
+}
+.bgld-form-file-upload-trust:after {
+	content: 'Attach Trust Documents';
+}
+.bgld-file-uploaded:before {
+	background-image: url(img/checkmark.gif);
+	background-size: 140px;
+}
+.bgld-file-uploaded:after {
+	content: 'Document uploaded';
+}
+.bgld-form-div-hidden {
+	display: none;
+}
+.input-required {
+	color: red;
+}
+.for-two-people {
+	font-size: 60%;
+	font-style: italic;
+}
+.bgld-form-div-hidden-data {
+	display: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+}
+@media screen and (max-width: 1024px) {
+	.bgld-new-upload-form form {
+		max-width: 100%;
+	}
+	.bgld-form-div:last-child > div {
+		flex-direction: column;
+	}
+	input[name="purchase-info-submit"] {
+		margin-top: 15px;
+	}
+	.bgld-form-div:last-child p {
+		text-align: center;
+	}
+}

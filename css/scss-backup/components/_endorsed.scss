@@ -1,0 +1,150 @@
+.endorsed-section{
+    height: 300px;
+    position: relative;
+    padding-top: rem(20px);
+    z-index: 9;
+    @include respond-below(md){
+        padding-top: 0;
+    }
+    .es{
+        &-head {
+            .h6{
+                color: $secondary-100;
+            }
+        }
+        &-wrap {
+            a {
+                text-decoration: none;
+            }
+            .slick {
+                &-arrow {
+                    @include respond-below(xl) {
+                        top: rem(90px);
+                        background-color: transparent;
+                        &.slick-prev {
+                            left: calc(50% - 105px);
+                        }
+                        &.slick-next {
+                            right: calc(50% - 105px);
+                        }
+                        &:before {
+                            font-size: rem(18px);
+                        }
+                    }
+                }
+                &-list {
+                    overflow: visible;
+                    @include respond-below(xl) {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
+                &-current{
+                    @include respond-below(xl) {
+                        .es-tooltip {
+                            height: 100%;
+                            padding: 0 0 rem(25px);
+                            overflow: visible;
+                            border-bottom: 1px solid $gray;
+                        }
+                        .es-img{
+                            height: rem(185px);
+                            width: rem(125px);
+                            margin-top: 0;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                &-track {
+                    @include respond-above(xl) {
+                        align-items: center;
+                    }
+                }
+            }
+
+            .es-block {
+                color: $black;
+            }
+        }
+        &-img{
+            position: relative;
+            height: rem(100px);
+            width: rem(100px);
+            border-radius: rem(200px);
+            outline: 2px solid $primary-100;
+            outline-offset: rem(4px);
+            transition: 0.3s;
+            @include imgFit();
+            @include respond-below(xl) {
+                margin: rem(50px) auto;
+            }
+            img{
+                border-radius: inherit;
+            }
+            &:hover, &:focus{
+                @include respond-above(xl) {
+                    height: rem(185px);
+                    width: rem(125px);
+                    + .es-tooltip {
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+        &-block {
+            position: relative;
+            padding-left: rem(25px);
+            padding-right: rem(25px);
+            @include respond-below(xl) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            &-wrap{
+                padding: rem(5px) 0;
+                @include respond-above(xl) {
+                    display: flex;
+                }
+            }
+        }
+        &-tooltip{
+            position: absolute;
+            left: 70%;
+            top: 92%;
+            min-width: rem(250px);
+            padding: rem(25px);
+            border-radius: rem(5px);
+            box-shadow: rem(10px) rem(15px) rem(35px) 0 rgba($black, 15%);
+            background-color: $white;
+            z-index: 9;
+            visibility: hidden;
+            transition: 0.1s;
+            @include respond-below(xl) {
+                position: static;
+                visibility: visible;
+                // min-width: auto;
+                max-width: rem(325px);
+                // width: calc(100% + 160px);
+                min-width: rem(300px);
+                margin-left: rem(-80px);
+                margin-right: rem(-80px);
+                margin-top: (20px);
+                box-shadow: none;
+                text-align: center;
+                height: 0;
+                padding: 0;
+                overflow: hidden;
+                transition: none;
+            }
+            .h6 {
+                @include respond-below(xl) {
+                    margin-bottom: rem(10px);
+                }
+            }
+            p {
+                @include respond-above(xl) {
+                    font-size: rem(14px);
+                }
+            }
+        }
+    }
+}

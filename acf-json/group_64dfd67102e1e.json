@@ -1,0 +1,120 @@
+{
+    "key": "group_64dfd67102e1e",
+    "title": "BLOCK -- Social",
+    "fields": [
+        {
+            "key": "field_64dfd7dbe7c2a",
+            "label": "Social Title",
+            "name": "bggb_social_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64dfd7dbe7c2b",
+            "label": "Social Repeater",
+            "name": "bggb_social_repeater",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_64dfd7dbe7c2c",
+                    "label": "Social Account Select",
+                    "name": "bggb_social_option_banner_account",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Facebook": "Facebook",
+                        "Twitter": "Twitter",
+                        "Youtube": "Youtube",
+                        "LinkIn": "LinkIn",
+                        "Pinterest": "Pinterest"
+                    },
+                    "default_value": false,
+                    "return_format": "label",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_64dfd7dbe7c2b"
+                },
+                {
+                    "key": "field_64dfd7dbe7c2d",
+                    "label": "Social Link",
+                    "name": "bggb_social_option_banner_link",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64dfd7dbe7c2b"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/bgg-social"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1695602048
+}

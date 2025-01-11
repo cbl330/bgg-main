@@ -1,0 +1,22 @@
+{
+    "name": "bgg-wysiwyg",
+    "title": "BGG - WYSIWYG",
+    "description": "wysiwyg",
+    "style": [
+        "file:./bgg-wysiwyg.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "text",
+    "keywords": [
+        "text",
+        "content"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-wysiwyg.php"
+    }
+}

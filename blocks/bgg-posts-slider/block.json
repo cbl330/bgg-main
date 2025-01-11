@@ -1,0 +1,23 @@
+{
+    "name": "bgg-posts-slider",
+    "title": "BGG - Posts Slider",
+    "description": "A block that pulls in posts from selected category",
+    "style": [
+        "file:./bgg-posts-slider.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "slides",
+    "keywords": [
+        "slider",
+        "post",
+        "content"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-posts-slider.php"
+    }
+}

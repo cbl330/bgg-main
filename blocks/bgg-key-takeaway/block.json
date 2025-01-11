@@ -1,0 +1,22 @@
+{
+    "name": "bgg-key-takeaway",
+    "title": "BGG - Key Takeaway",
+    "description": "A block that displays key takeaways",
+    "style": [
+        "file:./bgg-key-takeaway.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "text",
+    "keywords": [
+        "content",
+        "text"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-key-takeaway.php"
+    }
+}

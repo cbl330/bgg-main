@@ -1,0 +1,105 @@
+{
+    "key": "group_6531abbeb9400",
+    "title": "OPTIONS -- Product Settings",
+    "fields": [
+        {
+            "key": "field_6535c9d15d270",
+            "label": "RELATED PRODUCTS",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6535c9ea5d271",
+            "label": "Enable Related Products",
+            "name": "bgg_product_settings_enable_related_products",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Hide": "Hide",
+                "Show": "Show"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_6535cf3ee850f",
+            "label": "PRE-FOOTER CTA",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6535cf5de8510",
+            "label": "Enable Pre-Footer CTA",
+            "name": "bgg_product_settings_enable_pre-footer_cta",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Hide": "Hide",
+                "Show": "Show"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "products"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1698113355
+}

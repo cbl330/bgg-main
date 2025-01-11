@@ -1,0 +1,258 @@
+.blog-child-hero{
+    .bch{
+        &-author-date{
+            margin-bottom: rem(25px);
+        }
+        &-line{
+            position: relative;
+            padding: rem(3px) rem(25px) rem(3px) 0;
+            margin: rem(4px) rem(25px) rem(4px) 0;
+            @include respond-below(xl){
+                padding: 0;
+                margin: 0;
+                width: 100%;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 95%;
+                width: 1px;
+                background-color: $gray-800;
+                @include respond-below(xl){
+                    display: none;
+                }
+            }
+        }
+        &-social{
+            margin: rem(4px) 0;
+            @include respond-below(xl){
+                margin: rem(15px) 0 0;
+            }
+            span{
+                display: block;
+                margin-right: rem(15px);
+            }
+            a{
+                display: flex;
+                font-size: rem(18px);
+                margin-right: rem(15px);
+                text-decoration: none;
+            }
+        }
+        &-img{
+            position: relative;
+            padding-top: aspect-ratio(1065, 500);
+            @include imgFit();
+            @include respond-below(lg){
+                margin-left: rem(-35px);
+                margin-right: rem(-35px);
+            }
+            @include respond-below(md){
+                margin-left: rem(-25px);
+                margin-right: rem(-25px);
+            }
+            @include respond-below(sm){
+                padding-top: aspect-ratio(375, 250);
+            }
+        }
+    }
+}
+// content with sidebar
+.beside-main {
+    overflow: unset;
+    &-row{
+        @include respond-above(xxl){
+            margin-left: rem(-50px);
+            margin-right: rem(-50px);
+            > [class*=cell-] {
+                padding-left: rem(50px);
+                padding-right: rem(50px);
+            }
+        }
+    }
+    // sidebar
+    .sidebar{
+        position: sticky;
+        top: rem(30px);
+        &-form{
+            padding: rem(20px) rem(25px);
+            // max-width: rem(450px);
+            width: 100%;
+            background-color: rgba($white, 85%);
+            backdrop-filter: blur(25px);
+            box-shadow: 0px rem(2px) rem(15px) rem(3px) rgba($black, 10%);
+            border: 1px solid $gray;
+            @include respond-below(lg) {
+                display: none;
+            }
+            &-img {
+                margin-top: rem(-40px);
+                max-width: rem(70px);
+                width: 100%;
+            }
+            .h4{
+                padding-right: rem(10px);
+                margin-bottom: rem(15px);
+            }
+            .checkbox label {
+                font-size: rem(13px);
+            }
+            .submit-btn {
+                width: 100%;
+            }
+            p{
+                font-size: rem(10px);
+                margin-top: rem(10px);
+            }
+        }
+        &-post{
+            &:not(:last-child) {
+                margin-bottom: rem(25px);
+                padding-bottom: rem(25px);
+                border-bottom: 1px solid $gray;
+            }
+        }
+        &-line{
+            &:not(:last-child){
+                margin-bottom: rem(25px);
+            }
+            &-img{
+                position: relative;
+                height: rem(50px);
+                width: rem(50px);
+                min-width: rem(50px);
+                margin-right: rem(24px);
+                @include imgFit();
+            }
+        }
+        a.sidebar-line-wrap {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            &:hover, &:focus {
+                color: $secondary-100;
+            }
+        }
+    }
+    // beside newsletter
+    .newsletter-section {
+        margin: rem(30px) 0;
+    }
+    .ns {
+        &-main-row{
+            [class*=cell-] {
+                flex: auto;
+            }
+        }
+        &-left{
+            @include respond-above(xl){
+               width: 40%;
+            }
+            p {
+                font-weight: 400;
+            }
+        }
+        &-right{
+            @include respond-above(xl){
+                width: 60%;
+            }
+        }
+        &-middle {
+            display: none;
+        }
+    }
+}
+// table content
+.table-contents {
+    .container {
+        @include respond-above(xl) {
+            padding-top: rem(50px);
+            padding-bottom: rem(30px);
+        }
+    }
+    @include respond-below(xl) {
+        .tc {
+            &-head{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0;
+                &.is-open {
+                    em {
+                        transform: scaleY(-1);
+                    }
+                }
+                em {
+                    @include flex-center();
+                    height: rem(68px);
+                    width: rem(30px);
+                    transition: 0.3s;
+                    &::after {
+                        @include icon('\e904');
+                        color: $primary-100;
+                        font-size: rem(12px);
+                    }
+                }
+                + .row {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+// key-takeaways
+.key-takeaways {
+    .kt{
+        &-wrap{
+            position: relative;
+            &::before, &:after{
+                content: '';
+                position: absolute;
+                height: 100px;
+                width: 100px;
+            }
+            &::before {
+                left: 0;
+                top: 0;
+                border-left: 2px solid $primary-100;
+                border-top: 2px solid $primary-100;
+            }
+            &:after{
+                right: 0;
+                bottom: 0;
+                border-right: 2px solid $primary-100;
+                border-bottom: 2px solid $primary-100;
+            }
+            ul{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+// author-section
+.author-section {
+    .as {
+        &-wrap {
+            display: flex;
+            padding: rem(25px);
+            border: 1px solid $gray;
+            @include respond-below(xl){
+                flex-direction: column;
+            }
+        }
+        &-img{
+            position: relative;
+            height: rem(120px);
+            width: rem(120px);
+            min-width: rem(120px);
+            margin-right: rem(25px);
+            @include imgFit();
+            @include respond-below(xl){
+                margin-right: 0;
+                margin-bottom: rem(15px);
+            }
+        }
+    }
+}

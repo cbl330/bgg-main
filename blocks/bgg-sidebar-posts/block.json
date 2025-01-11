@@ -1,0 +1,22 @@
+{
+    "name": "bgg-sidebar-posts",
+    "title": "BGG - Sidebar Posts",
+    "description": "Display posts in sidebar",
+    "editorStyle": [
+        "file:./bgg-sidebar-posts.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "admin-post",
+    "keywords": [
+        "post",
+        "author"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-sidebar-posts.php"
+    }
+}

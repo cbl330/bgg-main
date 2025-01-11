@@ -1,0 +1,23 @@
+{
+    "name": "bgg-sidebar-related-posts",
+    "title": "BGG - Sidebar Related Posts",
+    "description": "A block that pulls in related posts",
+    "style": [
+        "file:./bgg-sidebar-related-posts.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "admin-post",
+    "keywords": [
+        "post",
+        "category",
+        "content"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-sidebar-related-posts.php"
+    }
+}

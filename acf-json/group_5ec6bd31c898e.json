@@ -1,0 +1,24 @@
+{
+    "key": "group_5ec6bd31c898e",
+    "title": "Coin details",
+    "fields": [],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "products"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1697720127
+}

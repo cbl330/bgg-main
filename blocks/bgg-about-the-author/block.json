@@ -1,0 +1,22 @@
+{
+    "name": "bgg-about-the-author",
+    "title": "BGG - Author Block",
+    "description": "Display author excerpt on posts",
+    "editorStyle": [
+        "file:./bgg-about-the-author.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "admin-users",
+    "keywords": [
+        "post",
+        "author"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-about-the-author.php"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "bgg-product-specifications",
+    "title": "BGG - Product Specifications",
+    "description": "Display product specs",
+    "style": [
+        "file:./bgg-product-specifications.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "text",
+    "keywords": [
+        "text",
+        "product",
+        "details"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-product-specifications.php"
+    }
+}

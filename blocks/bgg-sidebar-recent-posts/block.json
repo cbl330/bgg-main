@@ -1,0 +1,23 @@
+{
+    "name": "bgg-sidebar-recent-posts",
+    "title": "BGG - Sidebar Recent Posts",
+    "description": "A block that pulls in recent posts",
+    "style": [
+        "file:./bgg-sidebar-recent-posts.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "admin-post",
+    "keywords": [
+        "post",
+        "category",
+        "content"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-sidebar-recent-posts.php"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "bgg-products-slider",
+    "title": "BGG - Products Slider",
+    "description": "A block that pulls in products from selected category",
+    "style": [
+        "file:./bgg-products-slider.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "slides",
+    "keywords": [
+        "slider",
+        "products",
+        "content"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-products-slider.php"
+    }
+}

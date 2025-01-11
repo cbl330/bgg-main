@@ -1,0 +1,27 @@
+.stay-connected{
+    overflow: hidden;
+    border: 1px solid $gray;
+    .sc{
+        &-wrap{
+            // margin-left: rem(-25px);
+            // margin-right: rem(-25px);
+        }
+        &-cell{
+            padding-left: rem(25px);
+            padding-right: rem(25px);
+        }
+        &-icon{
+            @include flex-center();
+            height: rem(90px);
+            width: rem(90px);
+            font-size: rem(30px);
+            border-radius: rem(200px);
+            background-color: $white;
+            text-decoration: none;
+            @include respond-below(xl) {
+                height: rem(50px);
+                width: rem(50px);
+            }
+        }
+    }
+}

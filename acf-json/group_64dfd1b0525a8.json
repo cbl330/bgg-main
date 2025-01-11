@@ -1,0 +1,55 @@
+{
+    "key": "group_64dfd1b0525a8",
+    "title": "BLOCK -- Featured Products",
+    "fields": [
+        {
+            "key": "field_64dfd1b05639e",
+            "label": "Featured Products",
+            "name": "bggb_featured_products",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "return_format": "object",
+            "min": "",
+            "max": "",
+            "elements": "",
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/bgg-featured-product"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1698712176
+}

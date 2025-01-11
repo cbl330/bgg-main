@@ -1,0 +1,43 @@
+{
+    "key": "group_64dfcff315a37",
+    "title": "BLOCK -- About the Author",
+    "fields": [
+        {
+            "key": "field_64dfcff305cdc",
+            "label": "Block Message",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "This blocks auto populates the author content from the Author Profile.\r\n- Profile image\r\n- Author Name\r\n- Author description",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/bgg-about-the-author"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1695519498
+}

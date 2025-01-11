@@ -1,0 +1,27 @@
+.customers-reviews {
+    .crs{
+        &-img {
+            &.-desktop {
+                @include respond-below(xl){
+                    display: none;
+                }
+            }
+            &.-device {
+                max-width: rem(325px);
+                width: 100%;
+                margin: 0 auto;
+                @include respond-above(xl){
+                    display: none;
+                }
+                img{
+                    display: block;
+                    margin-bottom: rem(20px);
+                    &:first-child{
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+            }
+        }
+    }
+}

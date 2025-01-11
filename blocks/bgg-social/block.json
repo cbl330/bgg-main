@@ -1,0 +1,23 @@
+{
+    "name": "bgg-social",
+    "title": "BGG - Social",
+    "description": "A block for displaying different social media section options",
+    "style": [
+        "file:./bgg-social.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "share",
+    "keywords": [
+        "social",
+        "media",
+        "share"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-social.php"
+    }
+}

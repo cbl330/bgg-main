@@ -1,0 +1,381 @@
+/**
+ * Basic typography style for copy text
+ */
+@use "sass:math";
+
+html {
+    height: 100%;
+    @include rem-baseline(16px);
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    min-height: 100%;
+    height: auto;
+    color: $body-color;
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+    line-height: 1.75;
+    font-weight: 500;
+    background-color: $body-bg;
+    // @include custom-scroll;
+    @media screen and (-ms-high-contrast: active),
+    (-ms-high-contrast: none) {
+        height: 100%;
+    }
+    &.scroll-fixed {
+        overflow: hidden;
+    }
+}
+
+// Global Text Styling
+.wp-caption-text {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+    font-style: italic;
+}
+html {
+    scroll-behavior: smooth;
+}
+.mainsection p, .mainsection ul, .mainsection li {
+    line-height: 2 !important;
+}
+.mainsection h1, .mainsection h2, .mainsection h3, .mainsection h4, .mainsection h5 {
+    margin-top: 2rem;
+    // line-height: 1.5 !important;
+}
+.mainsection a {
+    font-weight: 700;
+    color: #0B7FF2;
+}
+.mainsection h1.entry-title.heading-h0.mb-xl-75.mb-30.pb-15 {
+    margin-bottom: 0px;
+}
+.entry-title {
+    margin-bottom: 2rem;
+}
+
+// Heading style
+@each $key,
+$size in $headingSize {
+    #{$key},
+    .#{$key} {
+        margin-bottom: $hgroup-margin-bottom;
+        color: $hgroup-color;
+        font-family: $hgroup-font-family;
+        font-size: $size;
+        font-weight: $hgroup-font-weight;
+        line-height: $hgroup-line-height;
+        word-break: keep-all;
+        a {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+        }
+        span{
+            font-weight: 400;
+        }
+        @if $key=="h1" {
+            @include respond-below(xxl) {
+                font-size: rem(43px);
+            }
+            @include respond-below(xl) {
+                font-size: rem(32px);
+            }
+        }
+        @else if $key=="h2" {
+            // @include respond-below(xl) {
+            //     font-size: rem(32px);
+            // }
+        }
+        @else if $key=="h3" {
+            // @include respond-below(xl) {
+            //     font-size: rem(24px);
+            // }
+        }
+        @else if $key=="h4" {
+            // @include respond-below(xl) {
+            //     font-size: rem(20px);
+            // }
+        }
+        @else if $key=="h5" {
+            line-height: 1.3;
+            // @include respond-below(xl) {
+            //     font-size: rem(18px);
+            // }
+        }
+        @else if $key=="h6" {
+            line-height: 1.3;
+        }
+    }
+}
+
+p {
+    margin-bottom: rem(20px);
+    @include respond-below(xl) {
+        margin-bottom: rem(12px);
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+:is(ul, ol) {
+    --ulolLeftPadding: #{rem(20px)};
+    padding-left: var(--ulolLeftPadding);
+    margin-bottom: rem(15px);
+    :is(ul, ol) {
+        margin-top: rem(12px);
+        margin-bottom: 0;
+    }
+    li {
+        padding-top: rem(6px);
+        padding-bottom: rem(6px);
+        .bullet-styled & {
+            position: relative;
+            list-style: none;
+            &:before {
+                position: absolute;
+                left: calc(var(--ulolLeftPadding) * -1);
+                color: $primary-100;
+                font-weight: 700;
+                line-height: 1;
+            }
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+ul {
+    >li {
+        .bullet-styled & {
+            --ulBox: 8px;
+            &::before {
+                content: "";
+                top: rem(14px);
+                width: var(--ulBox);
+                height: var(--ulBox);
+                background: transparent;
+                border-radius: 100%;
+                border: 2px solid $secondary-100;
+            }
+            >ul {
+                >li {
+                    &::before {
+                        border: 1px solid $gray;
+                        height: rem(6px);
+                        width: rem(6px);
+                    }
+                    >ul {
+                        >li {
+                            --ulBox: 4px;
+                            &::before {
+                                top: em(16px);
+                                background: currentColor;
+                                border-radius: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bullet-check & {
+            --ulBox: 20px;
+            padding: 0 0 0 rem(30px);
+            margin-bottom: rem(15px);
+            position: relative;
+            &::before {
+                @include icon('\e90e');
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: var(--ulBox);
+                height: var(--ulBox);
+                font-size: rem(14px);
+                color: $primary-100;
+                @include flex-center();
+                .bg-dark &{
+                    // color: $white;
+                }
+            }
+            a{
+                color: $secondary-100;
+                &:hover, &:focus {
+                    color: $primary-100;
+                }
+            }
+        }
+        .bullet-check.-secondary & {
+            &:before {
+                color: $secondary-100;
+            }
+        }
+    }
+    .bullet-check & {
+        padding-left: 0;
+        list-style: none;
+    }
+}
+
+ol {
+    >li {
+        .bullet-styled & {
+            counter-increment: counter-1;
+            &:before {
+                content: counter(counter-1) ". ";
+                top: 10px;
+                font-size: em(14px);
+            }
+            >ol {
+                counter-reset: counter-2;
+                >li {
+                    counter-increment: counter-2;
+                    &:before {
+                        content: counter(counter-2, lower-alpha) ". ";
+                    }
+                }
+            }
+        }
+    }
+}
+
+blockquote {
+    position: relative;
+    display: block;
+    padding: rem(10px) 0 rem(10px) rem(48px);
+    font-size: rem(16px);
+    line-height: 2;
+    margin-bottom: rem(25px);
+    border-left: 2px solid $primary-100;
+    @include respond-below(xl) {
+        padding: rem(5px) 0 rem(5px) rem(23px);
+        font-size: rem(18px);
+        line-height: 1.5;
+    }
+    p {
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        color: inherit;
+    }
+}
+
+hr {
+    width: 100%;
+    height: 0;
+    // margin: rem(10px) auto rem(40px);
+    margin: rem(30px) auto;
+    border: 0 $black solid;
+    border-top-width: rem(1px);
+    overflow: visible;
+}
+
+img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+    border: none;
+    &[src$=".svg"] {
+        max-height: 100%;
+    }
+}
+
+picture {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Link
+------------------------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+    a {
+        text-decoration: underline;
+    }
+}
+
+li a {
+    color: #0b7ff2;
+}
+
+a {
+    color: $primary-100;
+    transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+    text-decoration: underline;
+    &:hover, &:focus {
+        color: $secondary-100;
+        outline: none;
+    }
+    &.tab-outline {
+        outline-offset: rem(3px);
+        outline: 1px solid;
+        // border-radius: 6px;
+    }
+    p & {
+        font-weight: 700;
+        color: $blue;
+        &:focus {
+            outline: none;
+            border: 1px solid;
+            border-radius: 6px;
+        }
+    }
+    .bg-dark & {
+        color: $white;
+        &:hover {
+            color: $secondary-100;
+        }
+    }
+}
+
+.article-link {
+    text-decoration: none;
+}
+
+/* Tables
+------------------------------------------------------------------------------*/
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    td {
+        text-align: left;
+        font-weight: normal;
+    }
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.table-bordered {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    td,
+    th {
+        vertical-align: bottom;
+        border-bottom: rem(1px) solid $gray;
+        padding: rem(10px);
+    }
+}
+
+
+.fancybox__content{
+    > .carousel__button.is-close{
+        top: rem(-50px);
+        right: 0;
+    }
+} 
+
+// Dark Background

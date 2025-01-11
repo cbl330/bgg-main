@@ -1,0 +1,72 @@
+.info-kit-hero {
+    position: relative;
+    .ikh{
+        &-bg{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 80%;
+            width: 100%;
+            @include imgFit();
+            @include respond-below(xl) {
+                height: 31%;
+            }
+        }
+        &-heading{
+            p {
+                font-size: rem(24px);
+                @include respond-below(xl) {
+                    font-size: rem(19px);
+                }
+                @include respond-below(xs) {
+                    font-size: rem(16px);
+                }
+            }
+        }
+        &-wrap{
+            position: relative;
+        }
+        &-bottom{
+            margin: rem(50px) 0;
+            box-shadow: rem(10px) rem(15px) rem(35px) 0 rgba($black, 15%);
+            > .row {
+                @include respond-below(xl) {
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+        &-left-content{
+            padding: rem(60px) rem(20px) rem(50px) rem(50px);
+            @include respond-below(xl) {
+                padding: rem(40px) rem(30px) rem(20px);
+            }
+            @include respond-below(md) {
+                padding: rem(20px) rem(30px) rem(20px);
+            }
+        }
+        &-img{
+            margin: rem(-40px) rem(-30px);
+            @include respond-below(xl) {
+                margin: 0 auto;
+                max-width: rem(140px);
+            }
+            @include respond-below(md) {
+                margin: 0 auto;
+                max-width: rem(200px);
+            }
+            img{
+                width: 100%;
+            }
+        }
+        &-form {
+            p{
+                font-size: rem(10px);
+                opacity: 50%;
+            }
+            &-inner{
+                border-bottom: 1px solid $gray;
+                padding-bottom: rem(28px);
+            }
+        }
+    }
+}

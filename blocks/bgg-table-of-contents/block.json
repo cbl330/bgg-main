@@ -1,0 +1,23 @@
+{
+    "name": "bgg-table-of-contents",
+    "title": "BGG - Table of Contents",
+    "description": "Table of Contents",
+    "style": [
+        "file:./bgg-table-of-contents.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "text-page",
+    "keywords": [
+        "content",
+        "layout",
+        "source"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-table-of-contents.php"
+    }
+}

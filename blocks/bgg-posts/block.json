@@ -1,0 +1,23 @@
+{
+    "name": "bgg-posts",
+    "title": "BGG - Posts",
+    "description": "A block that pulls in posts based on selected category",
+    "style": [
+        "file:./bgg-posts.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "admin-post",
+    "keywords": [
+        "post",
+        "category",
+        "content"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-posts.php"
+    }
+}

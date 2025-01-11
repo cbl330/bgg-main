@@ -1,0 +1,106 @@
+.error {
+    &-404{
+        a.error-block {
+            &:hover, &:focus{
+                h6, .h6 {
+                    color: $secondary-100;
+                }
+            }
+        }
+    }
+    &-searchbar{
+        position: relative;
+        display: flex;
+        align-items: center;
+        input[type=search]{
+            padding-left: rem(47px);
+            background-color: $white;
+        }
+        button{
+            position: absolute;
+            left: rem(17px);
+            background: transparent;
+            border: none;
+            padding: 0;
+            font-size: rem(15px);
+            pointer-events: none;
+        }
+    }
+    &-block{
+        display: block;
+        height: 100%;
+        padding: rem(66px) rem(20px);
+        text-decoration: none;
+        border: 1px solid $gray;
+        @include respond-below(xl) {
+            padding: rem(28px) rem(20px);
+        }
+        &-icon{
+            @include flex-center();
+            height: rem(75px);
+            width: rem(75px);
+            margin: 0 auto rem(22px);
+            @include respond-below(xl) {
+                height: rem(65px);
+                width: rem(65px);
+                margin: 0 auto rem(15px);
+            }
+        }
+        h6, .h6 {
+            transition: 0.3s;
+        }
+        &-wrap {
+            .row {
+                @include respond-below(sm) {
+                    @include row-space(5px);
+                    [class*=cell-] {
+                        margin-bottom: rem(5px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include respond-below(lg) {
+    .main-404 {
+        .sidebar {
+            display: flex;
+            flex-direction: column-reverse;
+            &-post {
+                border-bottom: none;
+                margin-bottom: rem(50px);
+            }
+            &-form {
+                display: block;
+                margin-top: rem(90px);
+                margin-left: rem(-35px);
+                width: calc(100% + 70px);
+                background-color: $primary-200;
+                box-shadow: none;
+                border: none;
+                &-head{
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    h4, .h4{
+                        padding-right: 0;
+                        text-align: center;
+                        font-size: rem(24px);
+                        margin-bottom: rem(25px);
+                    }
+                }
+                &-img {
+                    max-width: rem(133px);
+                    margin-top: rem(-105px);
+                    margin-bottom: rem(25px);
+                }
+            }
+        }
+    }
+}
+@include respond-below(md) {
+    .main-404 .sidebar-form {
+        margin-left: rem(-25px);
+        width: calc(100% + 50px);
+    }
+}

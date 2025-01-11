@@ -1,0 +1,100 @@
+{
+    "key": "group_6531a99c1eb4f",
+    "title": "BLOCK -- Products by Category",
+    "fields": [
+        {
+            "allow_backendsearch": 0,
+            "show_column_filter": false,
+            "allow_bulkedit": 0,
+            "allow_quickedit": 0,
+            "show_column": 0,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
+            "key": "field_657dc8c11c689",
+            "label": "Block Title",
+            "name": "bggb_products_block_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "allow_backendsearch": false,
+            "show_column_filter": 0,
+            "allow_bulkedit": 0,
+            "allow_quickedit": 0,
+            "show_column": 0,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
+            "key": "field_6531a99c23fc2",
+            "label": "Products Selector",
+            "name": "bggb_products_selector",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "gold": "Gold",
+                "silver": "Silver",
+                "platinum": "Platinum",
+                "palladium": "Palladium",
+                "ira_approved": "IRA Eligible",
+                "bullion": "Bullion",
+                "numismatic": "Numismatic",
+                "proof": "Proof",
+                "fixed-mintage": "Fixed Mintage"
+            },
+            "default_value": false,
+            "return_format": "array",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/bgg-products"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/bgg-products-slider"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "qef_simple_location_rules": 0,
+    "modified": 1702742229
+}

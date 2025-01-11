@@ -1,0 +1,19 @@
+{
+    "name": "bgg-contact",
+    "title": "BGG - Contact",
+    "description": "A block for contact page contact info",
+    "style": [
+        "file:./bgg-contact.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "text",
+    "keywords": "contact",
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-contact.php"
+    }
+}

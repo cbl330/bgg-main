@@ -1,0 +1,23 @@
+{
+    "name": "bgg-resource-spotlight",
+    "title": "BGG - Resource Spotlight",
+    "description": "Displays featured posts based on selected category",
+    "style": [
+        "file:./bgg-resource-spotlight.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "category",
+    "keywords": [
+        "resource",
+        "spotlight",
+        "post"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-resource-spotlight.php"
+    }
+}

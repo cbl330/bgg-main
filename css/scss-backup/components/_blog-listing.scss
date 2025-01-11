@@ -1,0 +1,121 @@
+.blog-listing{
+    overflow: hidden;
+
+    .article-link {
+        color: $black;
+        text-decoration: none;
+    }
+
+    .container {
+        overflow: hidden;
+    }
+    .h2 {
+        margin-top: rem(3px);
+        margin-bottom: rem(6px);
+    }
+    .btn{
+        @include respond-below(xl){
+            padding: 0;
+            color: $blue;
+            background-color: transparent;
+            text-decoration: underline;
+            font-size: rem(14px);
+            &:hover, &:focus {
+                color: $secondary-100;
+            }
+            &:before{
+                display: none;
+            }
+        }
+    }
+    @at-root .bl{
+        &-img {
+            position: relative;
+            padding-top: aspect-ratio(337,194);
+            margin-bottom: rem(15px);
+            @include imgFit();
+        }
+    }
+    @include respond-below(sm){
+        .row{
+            .slick-slide{
+                width: 100% !important;
+                &:first-child {
+                    margin-bottom: rem(30px);
+                }
+            }
+            [class*=cell-], 
+            .slick-slide{
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &:not(:first-child), 
+                &:not(:first-child) .blog-listing-item{
+                    display: flex !important;
+                    &:not(:last-child){
+                        padding-bottom: rem(20px);
+                        margin-bottom: rem(20px);
+                        border-bottom: 1px solid $gray;
+                    }
+                    .bl-img{
+                        position: relative;
+                        height: rem(50px);
+                        width: rem(50px);
+                        min-width: rem(50px);
+                        margin-right: rem(20px);
+                        padding-top: 0;
+                        margin-bottom: 0;
+                        @include respond-below(lg) {
+                            height: rem(112px);
+                            width: rem(112px);
+                            min-width: rem(112px);
+                        }
+                    }
+                    .h4{
+                        margin-bottom: rem(10px);
+                        font-size: rem(16px);
+                    }
+                    .excerpt{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    &-slider{
+        .slick{
+            &-track {
+                @include respond-below(sm) {
+                    flex-wrap: wrap;
+                    width: auto !important;
+                    transform: none !important;
+                }
+            }
+            &-arrow {
+                top: rem(-62px);
+                @include respond-below(sm) {
+                    display: none !important;
+                }
+            }
+            &-prev{
+                left: auto;
+                right: rem(58px);
+            }
+            &-next{
+                right: rem(15px);
+            }
+        }
+    }
+
+    .desktop {
+        @include respond-below(sm) {
+            display: none;
+        }
+    }
+
+    .mobile {
+        @include respond-above(sm) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "key": "group_64dfd4dadaa96",
+    "title": "BLOCK -- Product Cards",
+    "fields": [
+        {
+            "key": "field_64dfd4dadc848",
+            "label": "Product Metal Type",
+            "name": "bggb_pc_metal_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Gold": "Gold",
+                "Silver": "Silver",
+                "Platinum": "Platinum",
+                "Palladium": "Palladium"
+            },
+            "default_value": false,
+            "return_format": "label",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1695607653
+}

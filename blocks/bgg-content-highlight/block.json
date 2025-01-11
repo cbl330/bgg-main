@@ -1,0 +1,24 @@
+{
+    "name": "bgg-content-highlight",
+    "title": "BGG - Content Highlight",
+    "description": "Content highlight block",
+    "style": [
+        "file:./bgg-content-highlight .css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "layout",
+    "keywords": [
+        "layout",
+        "content",
+        "text",
+        "highlight"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-content-highlight.php"
+    }
+}

@@ -1,0 +1,11 @@
+.two-column-image {
+    .tci{
+        &-wrap{
+            position: relative;
+            padding-top: aspect-ratio(525, 525);
+            border: 1px solid $gray;
+            box-shadow: rem(10px) rem(15px) rem(35px) 0 rgba($black, 15%);
+            @include imgFit();
+        }
+    }
+}

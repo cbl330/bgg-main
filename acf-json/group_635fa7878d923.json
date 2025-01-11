@@ -1,0 +1,24 @@
+{
+    "key": "group_635fa7878d923",
+    "title": "Supporters",
+    "fields": [],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "endorser"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1697720180
+}

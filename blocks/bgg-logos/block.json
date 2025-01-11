@@ -1,0 +1,22 @@
+{
+    "name": "bgg-logos",
+    "title": "BGG - Logos",
+    "description": "Logo",
+    "style": [
+        "file:./bgg-logos.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "images-alt",
+    "keywords": [
+        "logos",
+        "media"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-logos.php"
+    }
+}

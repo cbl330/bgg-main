@@ -1,0 +1,23 @@
+{
+    "name": "bgg-content-card",
+    "title": "BGG - Content Card",
+    "description": "Content Card",
+    "style": [
+        "file:./bgg-content-card.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "index-card",
+    "keywords": [
+        "media",
+        "layout",
+        "content"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-content-card.php"
+    }
+}

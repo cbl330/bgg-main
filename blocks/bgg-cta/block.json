@@ -1,0 +1,23 @@
+{
+    "name": "bgg-cta",
+    "title": "BGG - CTA Options",
+    "description": "Block to display different CTA layout options",
+    "style": [
+        "file:./bgg-cta.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "layout",
+    "keywords": [
+        "cta",
+        "layout",
+        "content"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-cta.php"
+    }
+}

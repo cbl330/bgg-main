@@ -1,0 +1,11 @@
+.column-icon-block{
+    .cib-img{
+        @include flex-center();
+        height: rem(75px);
+        width: rem(75px);
+        margin-bottom: rem(25px);
+        img{
+            max-height: 100%;
+        }
+    }
+}

@@ -1,0 +1,235 @@
+/*--- footer ---*/
+.main-footer {
+	width: 100%;
+	background-image: linear-gradient(180deg, $black, $gray-800);
+	border-top: 4px solid $primary-100;
+	@include respond-below(xl) {
+		background-image: linear-gradient(180deg, $black, $gray-800);
+	}
+	* {
+		color: $white;
+		font-size: rem(14px);
+	}
+	strong{
+		display: block;
+		margin-bottom: rem(4px);
+	}
+	.mf{
+		&-brand{
+			display: block;
+			width: rem(236px);
+		}
+		&-title{
+			color: $primary-100;
+			margin-bottom: rem(21px);
+			@include respond-below(md) {
+				margin-bottom: rem(15px);
+			}
+		}
+		&-left {
+			address{
+				font-style: normal;
+			}
+			&-block {
+				margin-bottom: rem(15px);
+				i {
+					font-size: rem(19px);
+					margin-right: rem(15px);
+					margin-top: rem(2px);
+					@include respond-below(lg){
+						font-size: rem(16px);
+						margin-right: rem(10px);
+					}
+				}
+			}
+		}
+		&-menu {
+			ul{
+				padding: 0;
+			}
+			li{
+				list-style: none;
+				padding: 0;
+				margin-bottom: rem(15px);
+				@include respond-above(xxl){
+					padding-right: rem(20px);
+				}
+				a {
+					text-decoration: none;
+				}
+			}
+			@include respond-below(sm) {
+				&:last-child {
+					.mf-device-collapse {
+						border-bottom: 1px solid $white;
+						margin-bottom: rem(15px);
+					}
+				}
+			}
+		}
+		&-social{
+			@include respond-below(sm) {
+				display: flex;
+				justify-content: space-between;
+			}
+			ul{
+				margin-left: rem(-10px);
+				margin-right: rem(-10px);
+			}
+			li {
+				padding-left: rem(10px);
+				padding-right: rem(10px);
+				margin-bottom: rem(10px);
+			}
+			a {
+				font-size: rem(18px);
+			}
+		}
+		&-bottom{
+			padding: rem(25px) 0;
+			@include respond-above(sm) {
+				border-top: 1px solid $white;
+			}
+			strong, p{
+				font-size: rem(12px);
+			}
+			p {
+				@include respond-above(xl) {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&-device-collapse {
+			// @include respond-below(sm) {
+			@include respond-below(lg) {
+				border-top: 1px solid $white;
+				&.is-open {
+					.mf-title em {
+						transform: scaleY(-1);
+					}
+				}
+				.mf-title {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-bottom: 0;
+					em {
+						@include flex-center();
+						height: rem(50px);
+						width: rem(30px);
+						font-size: rem(11px);
+						transition: 0.3s;
+						&::after {
+							@include icon('\e904');
+							color: $primary-100;
+						}
+					}
+					+ ul {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&-request-bar {
+			display: none;
+			z-index: 10;
+			// @include respond-below(xl) {
+				@include respond-below(lg) {
+				display: block;
+				position: fixed;
+				width: 100%;
+				bottom: 0;
+				background-color: $white;
+				.container {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					padding: rem(10px) 0;
+				}
+				.btn {
+					display: block;
+					// max-width: rem(500px);
+					width: 100%;
+					margin-right: rem(13px);
+					color: $gray-800;
+					font-size: rem(16px);
+					&:hover, &:focus{
+						color: $primary-100;
+					}
+				}
+				&-close{
+					position: relative;
+					@include flex-center();
+					height: rem(24px);
+					width: rem(24px);
+					background-color: transparent;
+					border: none;
+					padding: 0;
+					&::before, &::after {
+						content: "";
+						position: absolute;
+						height: rem(14px);
+						width: 2px;
+						background-color: $primary-100;
+						transition: 0.3s;
+					}
+					&::before {
+						transform: rotate(45deg);
+					}
+					&::after {
+						transform: rotate(-45deg);
+					}
+				}
+			}
+		}
+
+		// &-request-bar {
+		// 	display: none;
+		// 	@include respond-below(xl) {
+		// 		display: block;
+		// 		background-color: $white;
+		// 		.container {
+		// 			display: flex;
+		// 			align-items: center;
+		// 			justify-content: space-between;
+		// 			padding: rem(10px) 0;
+		// 		}
+		// 		.btn {
+		// 			display: block;
+		// 			max-width: rem(295px);
+		// 			width: 100%;
+		// 			margin-right: rem(13px);
+		// 			color: $gray-800;
+		// 			font-size: rem(16px);
+		// 			&:hover, &:focus{
+		// 				color: $primary-100;
+		// 			}
+		// 		}
+		// 		&-close{
+		// 			position: relative;
+		// 			@include flex-center();
+		// 			height: rem(24px);
+		// 			width: rem(24px);
+		// 			background-color: transparent;
+		// 			border: none;
+		// 			padding: 0;
+		// 			&::before, &::after {
+		// 				content: "";
+		// 				position: absolute;
+		// 				height: rem(16px);
+		// 				width: 2px;
+		// 				background-color: $primary-100;
+		// 				transition: 0.3s;
+		// 			}
+		// 			&::before {
+		// 				transform: rotate(45deg);
+		// 			}
+		// 			&::after {
+		// 				transform: rotate(-45deg);
+		// 			}
+		// 		}
+		// 	}
+		// }
+	}
+}

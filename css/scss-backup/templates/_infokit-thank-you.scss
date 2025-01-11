@@ -1,0 +1,35 @@
+.infokit-thank-you {
+    .row {
+        @include respond-below(sm){
+            flex-direction: column-reverse;
+        }
+    }
+    .ity{
+        &-wrap{
+            i{
+                display: flex;
+                // border: 1px solid $black;
+                color: $green;
+                font-size: rem(40px);
+                padding: rem(4px);
+                margin-right: rem(24px);
+                @include respond-below(xl){
+                    border: none;
+                    padding: 0;
+                }
+            }
+            .h2{
+                margin: rem(8px) 0;
+                @include respond-below(md){
+                    margin: rem(4px) 0;
+                }
+            }
+        }
+        &-img{
+            max-width: rem(218px);
+            @include respond-below(sm){
+                max-width: rem(248px);
+            }
+        }
+    }
+}

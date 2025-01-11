@@ -1,0 +1,22 @@
+{
+    "name": "bgg-single-image",
+    "title": "BGG - Single Image",
+    "description": "A block to show a single image",
+    "style": [
+        "file:./bgg-single-image.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "format-image",
+    "keywords": [
+        "single",
+        "image"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-single-image.php"
+    }
+}

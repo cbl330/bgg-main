@@ -1,0 +1,22 @@
+{
+    "name": "bgg-products",
+    "title": "BGG - Products",
+    "description": "A block that pulls in products based on selected category",
+    "style": [
+        "file:./bgg-products.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "admin-post",
+    "keywords": [
+        "product",
+        "content"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-products.php"
+    }
+}

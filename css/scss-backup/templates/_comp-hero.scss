@@ -1,0 +1,290 @@
+// variable and mixin
+// @import 'abstracts/core' ;
+
+.hero-section {
+    padding-bottom: rem(50px);
+    overflow: hidden;
+    .row{
+        height: 100%;
+    }
+    .hs{
+        &-top{
+            position: relative;
+            padding-top: rem(53px);
+            min-height: rem(651px);
+            @include respond-below(xl){
+                padding-top: 0;
+                min-height: auto;
+            }
+            > .container {
+                @include respond-below(xl) {
+                    width: 100%;
+                }
+            }
+        }
+        &-bg{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            @include imgFit();
+            &-wrap {
+                @include respond-below(xl){
+                    position: relative;
+                    border-bottom: 5px solid $primary-100;
+                }
+                .hs-content {
+                    @include respond-above(xl){
+                        display: none;
+                    }
+                }
+            }
+        }
+        &-content{
+            position: relative;
+            max-width: 68%;
+            width: 100%;
+            padding-bottom: 12%;
+            @include respond-below(xl){
+                max-width: 100%;
+                width: 100%;
+                padding-bottom: 0;
+                margin-top: rem(35px);
+                text-align: center;
+            }
+            @include respond-below(xs){
+                .heading-h0 {
+                    font-size: rem(25px);
+                }
+            }
+            &-wrap{
+                @include respond-above(xl){
+                    display: flex;
+                    align-items: center;
+                }
+                .hs-content {
+                    @include respond-below(xl){
+                        display: none;
+                    }
+                }
+            }
+            .eyebrow-text{
+                font-size: rem(24px);
+                color: $white;
+                @include respond-below(xxl){
+                    font-size: rem(20px);
+                }
+                @include respond-below(xl){
+                    font-size: rem(16px);
+                    margin-bottom: rem(10px);
+                }
+            }
+            .heading-h0 {
+                @include respond-below(xl){
+                    margin-bottom: 0;
+                }
+                span{
+                    color: $primary-100;
+                    font-weight: 700;
+                }
+            }
+            .hs-bottom {
+                display: none;
+                @include respond-between(lg, xl){
+                    display: flex;
+                }
+            }
+        }
+        &-form{
+            padding: rem(42px) rem(50px);
+            max-width: rem(450px);
+            width: 100%;
+            margin-left: auto;
+            margin-bottom: rem(-158px);
+            background-color: rgba($white, 85%);
+            backdrop-filter: blur(25px);
+            box-shadow: 0px rem(10px) rem(25px) rem(5px) rgba($black, 20%);
+            @include respond-below(xxl){
+                padding: rem(40px);
+            }
+            @include respond-below(xl){
+                max-width: 100%;
+                margin-bottom: 0;
+                margin-right: auto;
+                box-shadow: rem(15px) 0 rem(40px) 0 rgba($black, 25%);
+            }
+            @include respond-below(sm) {
+                padding: rem(30px);
+            }
+            &-img {
+                margin-top: rem(-73px);
+                max-width: rem(115px);
+                width: 100%;
+                @include respond-below(xl) {
+                    max-width: rem(155px);
+                    margin-top: rem(-210px);
+                    margin-bottom: rem(20px);
+                    margin-left: auto;
+                    margin-right: 12rem;
+                }
+            }
+            .h3{
+                padding-right: rem(20px);
+                margin-bottom: rem(23px);
+                @include respond-above(xxl){
+                    font-size: rem(28px);
+                }
+                @include respond-below(xl) {
+                    padding-right: 0;
+                    text-align: center;
+                }
+            }
+            .hs-submit {
+                width: 100%;
+            }
+            p{
+                font-size: rem(11px);
+                margin-top: rem(15px);
+            }
+            &-head {
+                display: flex;
+                justify-content: space-between;
+                @include respond-below(xl) {
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+        &-bottom{
+            padding-top: rem(50px);
+            max-width: 70%;
+            margin-left: rem(-15px);
+            margin-right: rem(-15px);
+            @include respond-below(xl){
+                max-width: calc(100% + 30px);
+                width: calc(100% + 30px);
+                padding-top: rem(15px);
+                padding-bottom: rem(15px);
+                margin-left: rem(-12px);
+                margin-right: rem(-12px);
+                align-items: center;
+            }
+            &-wrap{
+                .hs-bottom {
+                    @include respond-below(xl){
+                        display: none;
+                    }
+                }
+            }
+        }
+        &-logo {
+            min-width: rem(150px);
+            flex: auto;
+            padding-right: rem(15px);
+            padding-left: rem(15px);
+            margin-bottom: rem(30px);
+            @include respond-below(xl){
+                min-width: auto;
+                width: 25%;
+                padding-right: rem(12px);
+                padding-left: rem(12px);
+                margin-bottom: 0;
+                text-align: center;
+            }
+            img {
+                height: 100%;
+                width: auto;
+                // width: 100%;
+                max-width: 168px;
+                @include respond-below(lg){
+                    // height: rem(35px);
+                    max-height: rem(50px);
+                    height: 100%;
+                    width: auto;
+                }
+                @include respond-below(sm){
+                    // height: rem(35px);
+                    // height: auto;
+                    // width: 100%;
+                    // height: 100%;
+                    // width: auto;
+                    max-height: rem(35px);
+                }
+            }
+        }
+        &-device-logo {
+            @include respond-above(xl) {
+                display: none;
+            }
+        }
+        &-person-device-img{
+            position: relative;
+            text-align: right;
+            @include respond-above(xl) {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Target Safari 3.1+ using a combination of feature queries and user agent detection */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    /* Safari-specific styles go here */
+    body {
+        .hero-section {
+            .hs{
+                &-logo {
+                    img {
+                        @include respond-below(md){
+                            // height: rem(35px);
+                            // height: auto;
+                            // width: 100%;
+                            height: 100%;
+                            width: auto;
+                            max-height: rem(50px);
+                        }
+                        @include respond-below(sm){
+                            // height: rem(35px);
+                            // height: auto;
+                            // width: 100%;
+                            // height: 100%;
+                            // width: auto;
+                            max-height: rem(25px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Alternatively, you can use the following, but note that user agent detection is generally not recommended */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm), (min-color-index:0) {
+    /* Safari-specific styles go here */
+    body {
+        .hero-section {
+            .hs{
+                &-logo {
+                    img {
+                        @include respond-below(md){
+                            // height: rem(35px);
+                            // height: auto;
+                            // width: 100%;
+                            height: 100%;
+                            width: auto;
+                            max-height: rem(50px);
+                        }
+                        @include respond-below(sm){
+                            // height: rem(35px);
+                            // height: auto;
+                            // width: 100%;
+                            // height: 100%;
+                            // width: auto;
+                            max-height: rem(25px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

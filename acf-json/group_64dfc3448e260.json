@@ -1,0 +1,112 @@
+{
+    "key": "group_64dfc3448e260",
+    "title": "BLOCK -- Posts by Category",
+    "fields": [
+        {
+            "allow_backendsearch": 0,
+            "show_column_filter": false,
+            "allow_bulkedit": 0,
+            "allow_quickedit": 0,
+            "show_column": 0,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
+            "key": "field_657dc8a9f4fd2",
+            "label": "Block Title",
+            "name": "bggb_posts_block_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "allow_backendsearch": false,
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
+            "key": "field_64dfc3449f2d2",
+            "label": "Latest Posts Selector",
+            "name": "bggb_posts_selector",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "latest-news": "Latest News",
+                "news": "News",
+                "press-release": "Press Release",
+                "educational": "Educational",
+                "interviews": "Interviews",
+                "dollar-2": "Dollar",
+                "economy": "Economy",
+                "featured": "Featured",
+                "financial": "Financial",
+                "general": "General",
+                "market-report": "Market Report",
+                "market-update": "Market Update",
+                "retirement": "Retirement",
+                "scam-watch": "Scam Watch"
+            },
+            "default_value": false,
+            "return_format": "array",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/bgg-posts-slider"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/bgg-posts"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/bgg-sidebar-posts"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "qef_simple_location_rules": 0,
+    "modified": 1702742207
+}

@@ -1,0 +1,550 @@
+:root {
+	--space-lg: #{rem(100px)};
+	--space-md: #{rem(80px)};
+	--space-sm: #{rem(50px)};
+	@include respond-below(xl) {
+		--space-lg: #{rem(50px)};
+		--space-md: #{rem(50px)};
+	}
+	@include respond-below(md) {
+		--space-md: #{rem(40px)};
+		--space-sm: #{rem(30px)};
+	}
+}
+
+// body {
+// 	margin-top: rem(150px);
+// 	@include respond-below(lg) {
+// 		margin-top: rem(90px);
+// 	}
+// }
+
+// CSS for WP-Admin
+#wpadminbar {
+	position: fixed;
+}
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	min-height: 100%;
+	// overflow: hidden;
+}
+.main-content {
+	overflow: hidden;
+}
+.main-container {
+	width: 100%;
+	align-self: start;
+}
+// Section Spacing
+.space {
+	&-lg {
+		padding-top: var(--space-lg);
+		padding-bottom: var(--space-lg);
+		&-m {
+			margin-top: var(--space-lg);
+			margin-bottom: var(--space-lg);
+		}
+	}
+	&-md {
+		padding-top: var(--space-md);
+		padding-bottom: var(--space-md);
+		&-m {
+			margin-top: var(--space-md);
+			margin-bottom: var(--space-md);
+		}
+	}
+	&-sm {
+		padding-top: var(--space-sm);
+		padding-bottom: var(--space-sm);
+		&-m {
+			margin-top: var(--space-sm);
+			margin-bottom: var(--space-sm);
+		}
+	}
+}
+// Text color white
+.bg-dark,
+.bg-secondary,
+.inner-text-white {
+	*:not(.btn) {
+		color: $white;
+	}
+}
+/* Pagination */
+.pagination {
+	ul {
+		@include flex-center;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		li {
+			position: relative;
+			padding: 0;
+			// margin: 0 rem(10px);
+			a,
+			span {
+				margin: 0 rem(10px);
+				&:hover {
+					color: $secondary-100 !important;
+				}
+			}
+			a:not(.prev, .next), span {
+				color: $gray-800;
+				line-height: 1;
+				text-decoration: none;
+				transition: 0.4s ease background-color, 0.4s ease color;
+				&.active {
+					border-color: $primary-100;
+				}
+			}
+			.prev, .next {
+				// margin: 0;
+				margin: 0 rem(5px);
+				color: $primary-100;
+				text-decoration: none;
+				cursor: pointer;
+				&.disabled {
+					opacity: 0.60;
+					pointer-events: none;
+				}
+			}
+			.next{
+				font-size: rem(14px);
+			}
+			.current {
+				font-weight: 700;
+			}
+		}
+	}
+}
+/* Breadcrumb */
+.breadcrumbs {
+	padding-top: rem(25px);
+	margin-bottom: rem(48px);
+	@include respond-below(xl) {
+		margin-bottom: rem(25px);
+	}
+	@include respond-below(xl) {
+		padding: rem(25px) 0 rem(7px);
+		min-width: auto;
+	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+		margin: 0;
+		li {
+			display: flex;
+			align-items: center;
+			padding: 0;
+			font-size: rem(12px);
+			a {
+				color: $gray-800;
+				text-decoration: none;
+				&:hover, &:focus{
+					color: $primary-100;
+				}
+			}
+			span{
+				font-weight: 700;
+			}
+			&:last-child {
+				font-weight: 700;
+			}
+			&:not(:last-child) {
+				&::after {
+					content: ">";
+					margin: 0 rem(8px);
+				}
+			}
+		}
+	}
+}
+/* Section Heading */
+.sec-heading {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: rem(50px);
+	p {
+		font-size: rem(20px);
+		@include respond-below(md) {
+			font-size: rem(18px);
+		}
+	}
+}
+/* eyebrow-text */
+.eyebrow-text {
+	display: block;
+	color: $secondary-100;
+	font-weight: 700;
+	margin-bottom: rem(25px);
+	@include respond-below(xl){
+		margin-bottom: rem(15px);
+	}
+	&.-small {
+		font-size: rem(12px);
+		margin-bottom: rem(10px);
+		@include respond-below(xl){
+			margin-bottom: rem(10px);
+		}
+	}
+}
+/* heaading h0 for 60px font-size */
+.heading-h0 {
+	font-size: rem(60px);
+	@include respond-below(xl3) {
+		font-size: rem(52px);
+	}
+	@include respond-below(xxl) {
+		font-size: rem(43px);
+	}
+	@include respond-below(xl) {
+		font-size: rem(32px);
+	}
+}
+
+
+// Show/Hide on desktop/mobile based on class -- GLOBAL
+.desktop {
+	@include respond-below(sm) {
+		display: none;
+	}
+}
+
+.mobile {
+	@include respond-above(sm) {
+		display: none;
+	}
+}
+
+// Decom Page Template Specific
+.desktop-decom {
+	@include respond-below(xl) {
+		display: none;
+	}
+}
+
+.mobile-decom {
+	@include respond-above(xl) {
+		display: none;
+	}
+}
+
+/* page-scroll-menu */
+// .page-scroll-menu{
+// 	position: sticky;
+//     top: 0;
+//     background-color: $white;
+// 	border-bottom: 1px solid $gray;
+// 	z-index: 99;
+// 	overflow: hidden;
+// 	.psm {
+// 		&-slider {
+// 			display: flex;
+// 			justify-content: center;
+// 			text-align: center;
+// 			.slick {
+// 				&-track{
+// 					margin-left: rem(-25px);
+// 					margin-right: rem(-25px);
+// 				}
+// 				&-arrow {
+// 					background-color: transparent;
+// 					&.slick-disabled {
+// 						opacity: 0;
+// 					}
+// 					&:before{
+// 						font-size: rem(10px);
+// 					}
+// 				}
+// 				&-prev {
+// 					left: rem(-26px);
+// 				}
+// 				&-next {
+// 					right: rem(-26px);
+// 				}
+// 			}
+// 		}
+// 		&-item{
+// 			a {
+// 				display: block;
+// 				padding: rem(10px) rem(20px) rem(7px);
+// 				margin: 0 rem(25px);
+// 				min-width: rem(125px);
+// 				color: $gray-800;
+// 				border-bottom: 3px solid transparent;
+// 				text-decoration: none;
+// 				text-align: center;
+// 				transition: 0.3s;
+// 				@include respond-below(xl) {
+// 					padding: rem(10px) 0 rem(7px);
+// 					min-width: auto;
+// 				}
+// 			}
+// 			&.active {
+// 				a{
+// 					font-weight: 700;
+// 					border-bottom: 3px solid $primary-100;
+// 					white-space: nowrap;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// /* page-scroll-menu */
+// .page-scroll-menu{
+// 	position: sticky;
+//     top: 0;
+//     background-color: $white;
+// 	border-bottom: 1px solid $gray;
+// 	z-index: 99;
+// 	.psm {
+// 		&-slider {
+// 			display: flex;
+// 			justify-content: center;
+// 			text-align: center;
+// 			.slick {
+// 				&-list {
+// 					padding-left: 0 !important;
+// 				}
+// 				&-track{
+// 					margin-left: rem(-20px);
+// 					margin-right: rem(-20px);
+// 					transform: none !important;
+// 				}
+// 				&-arrow {
+// 					background-color: transparent;
+// 					&.slick-disabled {
+// 						opacity: 0;
+// 					}
+// 					&:before{
+// 						font-size: rem(10px);
+// 					}
+// 				}
+// 				&-prev {
+// 					left: rem(-26px);
+// 				}
+// 				&-next {
+// 					right: rem(-26px);
+// 				}
+// 			}
+// 		}
+// 		&-item{
+// 			a {
+// 				display: block;
+// 				padding: rem(10px) rem(20px) rem(7px);
+// 				margin: 0 rem(25px);
+// 				min-width: rem(125px);
+// 				color: $gray-800;
+// 				border-bottom: 3px solid transparent;
+// 				text-decoration: none;
+// 				text-align: center;
+// 				transition: 0.3s;
+// 				@include respond-below(xl) {
+// 					padding: rem(10px) 0 rem(7px);
+// 					min-width: auto;
+// 				}
+// 			}
+// 			&.active {
+// 				a{
+// 					font-weight: 700;
+// 					border-bottom: 3px solid $primary-100;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+/* page-scroll-menu */
+.page-scroll-menu{
+	// position: sticky;
+	position: static;
+    top: 0;
+    background-color: $white;
+	border-bottom: 1px solid $gray;
+	z-index: 99;
+	@include respond-below(md) {
+		border: none;
+	}
+	> .container {
+		position: relative;
+	}
+	ul{
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		padding: 0;
+		margin: 0;
+		@include respond-below(md) {
+			display: none;
+			position: absolute;
+			width: 100%;
+			background-color: $white;
+			box-shadow: 0 rem(5px) rem(8px) rgba($black, 15%);
+		}
+	}
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		> a{
+			display: block;
+			padding: rem(10px) rem(20px) rem(7px);
+			min-width: rem(125px);
+			color: $gray-800;
+			border-bottom: 3px solid transparent;
+			text-decoration: none;
+			text-align: center;
+			transition: 0.3s;
+			@include respond-above(xl) {
+				margin: 0 rem(20px);
+			}
+			@include respond-below(lg) {
+				padding: rem(10px) rem(15px) rem(7px);
+			}
+			@include respond-below(md) {
+				padding: rem(8px) rem(15px);
+				border-top: 1px solid rgba($gray, 50%);
+			}
+		}
+		&:focus {
+			> a{
+				font-weight: 700;
+				border-bottom: 3px solid $primary-100 !important;
+				@include respond-below(md) {
+					border-bottom: 1px solid $primary-100;
+				}
+			}
+		}
+	}
+
+	li.current-menu-item {
+		// margin: 0;
+		// padding: 0;
+		// list-style: none;
+		> a{
+			// display: block;
+			// padding: rem(10px) rem(20px) rem(7px);
+			// min-width: rem(125px);
+			// color: $gray-800;
+			// border-bottom: 3px solid transparent;
+			// text-decoration: none;
+			// text-align: center;
+			// transition: all 0.3s ease-in-out;
+			// @include respond-above(xl) {
+			// 	margin: 0 rem(20px);
+			// }
+			// @include respond-below(lg) {
+			// 	padding: rem(10px) rem(15px) rem(7px);
+			// }
+			// @include respond-below(md) {
+			// 	padding: rem(8px) rem(15px);
+			// 	border-top: 1px solid rgba($gray, 50%);
+			// }
+			font-weight: 700;
+			border-bottom: 3px solid $primary-100 !important;
+			@include respond-below(md) {
+				border-bottom: 1px solid $primary-100;
+			}
+		}
+		// &:active,
+		// &:focus {
+		// 	> a{
+		// 		// font-weight: 700;
+		// 		// border-bottom: 3px solid $primary-100 !important;
+		// 		// @include respond-below(md) {
+		// 		// 	border-bottom: 1px solid $primary-100;
+		// 		// }
+		// 	}
+		// }
+	}
+
+	.psm-dropdown {
+		position: relative;
+		font-weight: 700;
+		text-align: center;
+		padding: rem(10px) rem(40px);
+		border-bottom: 1px solid $gray;
+		transition: 0.3s;
+		@include respond-above(md) {
+			display: none !important;
+		}
+		&:before {
+			@include icon('\e904');
+			position: absolute;
+			right: 1.25rem;
+			top: 55%;
+			transform: translateY(-50%) rotateX(0);
+			color: $primary-100;
+			font-size: 0.88rem;
+			transition: 0.3s
+		}
+		&.active:before {
+			transform: translateY(-50%) rotateX(-180deg);
+		}
+	}
+}
+
+// .pf-slider {
+// 	list-style-type: none;
+// }
+
+
+// guide-block
+.guide-block {
+	padding: rem(25px);
+	border: 1px solid $primary-100;
+	small{
+		font-size: rem(12px);
+	}
+}
+
+.sidebar-post-link {
+	color: $black;
+	text-decoration: none;
+}
+
+.display-none {
+	display: none;
+}
+
+// Remove Thank You Page Title
+body.page-thank-you {
+	h1.entry-title {
+		display: none;
+	}
+}
+
+// Fix for all YouTube Video Embeds
+p:has(iframe) {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width) */
+	overflow: hidden;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// Page Featured Image
+.pfi {
+	img {
+		width: 100%;
+		height: auto;
+		max-height: 60vh;
+		object-fit: cover;
+	}
+}
+
+.ccfic {
+	display: none;
+}

@@ -1,0 +1,14 @@
+.full-image {
+    .fi{
+        &-wrap{
+            position: relative;
+            padding-top: aspect-ratio(1065, 450);
+            border: 1px solid $gray;
+            box-shadow: rem(10px) rem(15px) rem(35px) 0 rgba($black, 15%);
+            @include imgFit();
+            @include respond-below(sm) {
+                padding-top: aspect-ratio(325, 325);
+            }
+        }
+    }
+}

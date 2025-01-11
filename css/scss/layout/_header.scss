@@ -1,0 +1,689 @@
+/*--- header ---*/
+.main-header {
+	// position: sticky;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: auto;
+	background-color: $white;
+	border-bottom: 1px solid $gray;
+	z-index: 999;
+	&.sticky {
+		.mh-top {
+			height: 0;
+			padding: 0;
+			overflow: hidden;
+			*{
+				height: 0;
+				overflow: hidden;
+			}
+		}
+		.brand {
+			width: rem(175px);
+			@include respond-below(xl){
+				width: rem(140px);
+			}
+		}
+		.navigation > ul > li > a {
+			padding: rem(23px) 0;
+		}
+		.mh-call-link {
+			font-size: rem(16px);
+		}
+		.mh-block:before {
+			height: 70%;
+		}
+	}
+
+	.price-ticker {
+		max-width: rem(795px);
+	}
+
+	.mh{
+		&-top {
+			background-color: $primary-200;
+			padding: rem(8px) 0;
+			transition: 0.3s;
+			@include respond-below(xl) {
+				overflow: auto;
+				padding: rem(6px) 0;
+			}
+			* {
+				transition: 0.3s;
+			}
+			&-left{
+				@include flex-center;
+				flex-wrap: wrap;
+				margin: 0 rem(-24px);
+				@include respond-below(xxl){
+					margin: 0 rem(-12px);
+				}
+				@include respond-below(xl) {
+					flex-wrap: nowrap;
+					text-align: center;
+				}
+				&-line {
+					display: inline-block;
+					padding: 0 rem(24px);
+					font-size: rem(14px);
+					@include respond-below(xxl){
+						padding: 0 rem(12px);
+					}
+					@include respond-below(xl) {
+						font-size: rem(12px);
+						white-space: nowrap;
+					}
+				}
+			}
+			&-green {
+				color: $green;
+			}
+			&-contact{
+				color: $secondary-100;
+				font-weight: 700;
+				font-size: rem(14px);
+				&:hover, &:focus{
+					color: $primary-100;
+				}
+			}
+			&-right{
+				display: flex;
+				align-items: center;
+				@include respond-below(xl){
+					display: none;
+				}
+				&-inner{
+					position: relative;
+					padding-right: rem(25px);
+					margin-right: rem(25px);
+					@include respond-below(xxl){
+						padding-right: rem(18px);
+						margin-right: rem(18px);
+					}
+					&:after{
+						content: "";
+						position: absolute;
+						right: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						height: 75%;
+						width: 1px;
+						background-color: $gray-800;
+					}
+				}
+			}
+		}
+		&-searchbar{
+			position: relative;
+			display: flex;
+			align-items: center;
+			input[type=search]{
+				height: rem(22px);
+				width: rem(144px);
+				border: none;
+				padding-right: 0;
+				padding-left: rem(28px);
+				font-size: rem(14px);
+				background-color: transparent;
+				@include respond-below(xl) {
+					padding-left: rem(22px);
+				}
+			}
+			button{
+				position: absolute;
+				left: 0;
+				color: $gray-800;
+				background: transparent;
+				border: none;
+				padding: 0;
+				font-size: rem(15px);
+				pointer-events: none;
+			}
+		}
+		&-device{
+			&-right {
+				// @include respond-above(xl) {
+					@include respond-above(xxl) {
+					display: none;
+				}
+			}
+			&-call {
+				display: block;
+				margin-right: rem(5px);
+				font-size: 0;
+				text-decoration: none;
+				&::before{
+					font-size: rem(18px);
+					color: $gray-800;
+				}
+			}
+			&-searchbar {
+				position: relative;
+				display: flex;
+				align-items: center;
+				margin-right: rem(8px);
+				height: rem(33px);
+				min-width: rem(35px);
+				&.open {
+					input[type=search]{
+						width: rem(220px);
+						border-color: $primary-100;
+						padding-right: rem(35px);
+					}
+					input[type=submit]{
+						pointer-events: all;
+					}
+				}
+				input[type=search]{
+					position: absolute;
+					right: 0;
+					top: 0;
+					height: rem(33px);
+					width: 0;
+					border-color: transparent;
+					background-color: $white;
+					border-radius: rem(20px);
+					padding-right: rem(20px);
+					font-size: rem(14px);
+					overflow: hidden;
+					transition: 0.3s;
+				}
+				input[type=submit]{
+					font-size: 0;
+					width: rem(35px);
+					height: rem(33px);
+					background: transparent;
+					border: none;
+					padding: 0;
+					pointer-events: none;
+				}
+				&-btn{
+					position: absolute;
+					right: 0;
+					top: 0;
+					@include flex-center();
+					&::before{		
+						position: absolute;
+						font-size: rem(18px);
+						margin-top: rem(-1px);
+					}
+				}
+			}
+		}
+		&-bottom{
+			> .container {
+				--gutter: 12px;
+			}
+			&-left{
+				// @include respond-below(xl){
+				@include respond-below(xxl){
+					padding: rem(10px) 0;
+				}
+			}
+			&-right{
+				display: flex;
+				// @include respond-below(xl){
+				@include respond-below(xxl){
+					display: none;
+				}
+			}
+		}
+	}
+	@at-root .mh-block{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding: rem(5px) 0 rem(5px) rem(50px);
+		@include respond-below(xl3){
+			padding: rem(4px) 0 rem(4px) rem(30px);
+		}
+		@include respond-below(xxl){
+			padding: rem(3px) 0 rem(3px) rem(15px);
+		}
+		// @include respond-below(xl) {
+		@include respond-below(xxl) {
+			justify-content: center;
+			align-items: center;
+			padding: rem(15px) rem(20px);
+		}
+		&:not(:last-child){
+			margin-right: rem(50px);
+			@include respond-below(xl3){
+				margin-right: rem(30px);
+			}
+			@include respond-below(xxl){
+				margin-right: rem(15px);
+			}
+			// @include respond-below(xl) {
+				@include respond-below(xxl) {
+				margin-right: 0;
+			}
+		}
+		&:before{
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+    		transform: translateY(-50%);
+			height: 100%;
+			width: 1px;
+			background-color: $gray-800;
+			transition: 0.3s;
+			// @include respond-below(xl) {
+			@include respond-below(xxl) {
+				display: none;
+			}
+		}
+		span{
+			font-weight: 700;
+			white-space: nowrap;
+			@include respond-between(xl, xxl){
+				font-size: rem(14px);
+			}
+		}
+	}
+	@at-root .mh-call{
+		// @include respond-below(xl) {
+		@include respond-below(xxl) {
+			border-bottom: 2px solid $gray-200;
+		}
+		.icon-call {
+			color: $primary-100;
+			margin-right: rem(11px);
+		}
+		&-link{
+			display: inline-flex;
+			align-items: center;
+			font-weight: 700;
+			white-space: nowrap;
+			font-size: rem(20px);
+			@include respond-between(xl, xxl){
+				font-size: rem(16px);
+			}
+		}
+	}
+	@at-root .mh-select{
+		// @include respond-below(xl) {
+		@include respond-below(xxl) {
+			background-color: $gray-200;
+			flex-direction: row;
+			span{
+				margin-right: rem(5px);
+			}
+		}
+		@include respond-below(xs) {
+			span{
+				font-size: rem(12px);
+			}
+		}
+		select{
+			height: rem(30px);
+			width: auto;
+			padding-left: 0;
+			border-top: none;
+			border-left: none;
+			border-right: none;
+			background-position: right 0 center;
+			@include respond-below(xs) {
+				font-size: rem(12px);
+			}
+		}
+	}
+	.brand {
+		display: inline-flex;
+		vertical-align: middle;
+		width: rem(307px);
+		margin-right: rem(35px);
+		transition: 0.3s;
+		@include respond-below(xl3){
+			width: rem(220px);
+			margin-right: rem(20px);
+		}
+		@include respond-below(xl) {
+			width: rem(153px);
+		}
+	}
+	/* nav */
+	.navigation {
+		display: inline-block;
+		word-break: keep-all;
+		// @include respond-below(xl){
+			@include respond-below(xxl){
+			display: none;
+		}
+		> ul {
+			display: flex;
+			padding: 0;
+			margin: 0;
+			>li {
+				padding: 0;
+				margin: 0 rem(10px);
+				list-style: none;
+				>a {
+					display: block;
+					color: $gray-800;
+					font-weight: 700;
+					padding: rem(38px) 0;
+					text-decoration: none;
+					@include respond-below(xxl){
+						font-size: rem(14px);
+					}
+				}
+				&.has-sub{
+					> a{
+						position: relative;
+						&:after{
+							@include icon('\e904');
+							color: $primary-100;
+							font-size:rem(10px);
+							padding-left: rem(4px);
+							transition: 0.3s;
+						}
+						&:before{
+							content: '';
+							position: absolute;
+							right: 0;
+							top: 50%;
+							transform: translateY(-50%);
+							background-color: $primary-100;
+							height: 2px;
+							width: rem(10px);
+							border-radius: rem(10px);
+							opacity: 0;
+							transition: 0.3s;
+						}
+					}
+					&:hover, &:focus {
+						> a{
+							&:after{
+								opacity: 0;
+							}
+							&:before{
+								opacity: 1;
+							}
+						}
+						> ul {
+							opacity: 1;
+							visibility: visible;
+							pointer-events: all;
+						}
+					}
+				}
+				> ul{
+					opacity: 0;
+					visibility: hidden;
+					pointer-events: none;
+					transition: 0.3s;
+				}
+				ul {
+					padding: 0;
+					margin: 0;
+					li {
+						padding: 0;
+						margin: 0;
+						list-style: none;
+						a:not(.btn) {
+							display: block;
+							color: $gray-800;
+							text-decoration: none;
+							&:hover, &:focus{
+								color: $primary-100;
+							}
+						}
+					}
+					/* mega menu */
+					@at-root .mh-megamenu{
+						position: absolute;
+						left: 0;
+						width: 100%;
+						border-top: 1px solid $gray;
+						// @include respond-below(xl){
+							@include respond-below(xxl){
+							border-top: none;
+						}
+						&::before {
+							content: "";
+							position: absolute;
+							left: 0;
+							top: 0;
+							height: 100vh;
+							width: 100%;
+							background-color: rgba($black, 0.3);
+							z-index: -1;
+							pointer-events: none;
+						}
+						&-search{
+							position: relative;
+							display: flex;
+							align-items: center;
+							margin-bottom: rem(50px);
+							// @include respond-below(xl) {
+								@include respond-below(xxl) {
+								margin-top: rem(25px);
+								margin-bottom: rem(35px);
+							}
+							input[type=search]{
+								height: rem(29px);
+								border: none;
+								border-bottom: 1px solid $primary-100;
+								padding-right: 0;
+								padding-left: 0;
+								background-color: $white;
+							}
+							button{
+								background: transparent;
+								border: none;
+								padding: 0;
+								font-size: rem(18px);
+								margin-right: rem(15px);
+							}
+						}
+						&-inner{
+							width: 100%;
+							background-color: $white;
+							padding: rem(50px) 0 rem(20px);
+							// @include respond-above(xl) {
+								@include respond-above(xxl) {
+								max-height: 80vh;
+								overflow: auto;
+							}
+							@include respond-below(md) {
+								padding: rem(20px) 0;
+							}	
+							.container {
+								// @include respond-below(xl) {
+									@include respond-below(xxl) {
+									--container-width: 100%;
+									--gutter:0;
+								}	
+							}
+							.left-cell {
+								margin-bottom: rem(25px);
+								@include respond-below(md) {
+									&:not(.lc2) {
+										> ul {
+											padding: 0 rem(30px);
+											border-bottom: 2px solid $gray-200;
+										}
+									}
+								}
+								a{
+									font-weight: 700;
+									// margin-bottom: rem(25px);
+									margin-bottom: rem(15px);
+								}
+							}
+							.middle {
+								&-title {
+									font-weight: 700;
+									// margin-bottom: rem(25px);
+									margin-bottom: rem(15px);
+								}
+								&-cell {
+									margin-bottom: rem(30px);
+									@include respond-below(md) {
+										margin-bottom: rem(15px);
+										padding: 0 rem(45px);
+									}
+									li {
+										margin-bottom: rem(8px);
+										a {
+											display: flex !important;
+											span{
+												display: inline-block;
+												margin-top: auto;
+												margin-bottom: auto;
+											}
+										}
+									}
+								}
+								&-img{
+									@include flex-center();
+									min-width: rem(50px);
+									width: rem(50px);
+									height: rem(50px);
+									margin-right: rem(15px);
+								}
+							}
+							.right {
+								&-cell{
+									margin-bottom: rem(30px);
+									@include respond-below(md) {
+										margin-bottom: 0;
+									}
+								}
+								&-bg {
+									position: absolute;
+									left: 0;
+									top: 0;
+									height: 100%;
+									width: 100%;
+									@include imgFit();
+									z-index: -1;
+								}
+								&-block{
+									position: relative;
+									display: flex;
+									padding: rem(25px) rem(40px) rem(25px) 0;
+									max-width: rem(453px);
+									width: 100%;
+									margin-left: auto;
+									z-index: 1;
+									// @include respond-below(xl) {
+									@include respond-below(xxl) {
+										flex-wrap: wrap;
+    									justify-content: center;
+										padding: rem(25px);
+										margin-right: auto;
+										text-align: center;
+									}
+									.h3, p {
+										color: $white;
+									}
+									.btn{
+										display: block;
+									}
+								}
+								&-inner{
+									padding-left: rem(39px);
+									// @include respond-below(xl) {
+									@include respond-below(xxl) {
+										padding-left: 0;
+										padding-top: rem(105px);
+									}
+								}
+								&-img{
+									max-width: rem(142px);
+									margin-left: rem(-39px);
+									margin-right: rem(25px);
+									// @include respond-below(xl) {
+									@include respond-below(xxl) {
+										margin: rem(-130px) 0 rem(25px);
+									}
+								}
+							}
+							.lc2 {
+								a {
+									font-weight: 400;
+								}
+								&-img {
+									height: rem(125px);
+									width: rem(125px);
+									margin-bottom: rem(15px);
+									// @include respond-below(xl){
+									@include respond-below(xxl){
+										height: rem(100px);
+										width: rem(100px);
+									}
+								}
+							}
+							.lc3 {
+								.middle-cell {
+									li {
+										margin-bottom: rem(15px);
+										@include respond-below(sm){
+											margin-bottom: rem(15px);
+										}
+									}
+								}
+								.middle-img {
+									margin-right: rem(25px);
+									@include respond-below(sm){
+										margin-right: rem(15px);
+									}
+									img{
+										height: 100%;
+										width: 100%;
+										object-fit: cover;	
+									}
+								}
+							}
+							.lc4 {
+								.middle-cell {
+									ul {
+										display: flex;
+										flex-wrap: wrap;
+									}
+									li {
+										width: 50%;
+										margin-bottom: rem(15px);
+										padding-right: rem(25px);
+										@include respond-below(sm){
+											width: 100%;
+											margin-bottom: rem(15px);
+											padding-right: 0;
+										}
+									}
+								}
+								.middle-img {
+									border-radius: rem(100px);
+									img{
+										height: 100%;
+										width: 100%;
+										object-fit: cover;	
+										border-radius: rem(100px);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Temporary Header Code
+.execphpwidget {
+	p {
+		margin-bottom: 0;
+	}
+}
+
+@include respond-above(xxl){
+	.endorsers-item {
+		display: flex;
+		align-items: center;
+		// margin-bottom: .75rem
+	}
+}

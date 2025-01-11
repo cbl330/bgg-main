@@ -1,0 +1,23 @@
+{
+    "name": "bgg-button",
+    "title": "BGG - Button",
+    "description": "Button",
+    "style": [
+        "file:./bgg-button.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "button",
+    "keywords": [
+        "button",
+        "component",
+        "layout"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-button.php"
+    }
+}

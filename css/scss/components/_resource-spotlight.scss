@@ -1,0 +1,89 @@
+.resource-spotlight{
+    @include respond-above(md) {
+        .article-wrap {
+            display: flex !important;
+            flex-direction: column !important;
+            flex: 1 !important;
+
+        
+            .article-content-wrap {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .rs{
+        &-tab{
+            margin-left: rem(-10px);
+            margin-right: rem(-10px);
+            button{
+                font-size: rem(14px);
+                font-weight: 700;
+                margin: 0 rem(25px) rem(10px) rem(25px);
+                padding: 0 0 rem(10px);
+                border: none;
+                background-color: transparent;
+                @include respond-below(md){
+                    margin: 0 rem(12px) rem(10px) rem(12px);
+                    padding: 0 0 rem(6px);
+                }
+                &.active{
+                    border-bottom: 2px solid $primary-100;
+                }
+            }
+        }
+        &-img {
+            position: relative;
+            padding-top: aspect-ratio(337,194);
+            margin-bottom: rem(15px);
+            @include imgFit();
+        }
+        &-link {
+            text-decoration: none;
+        }
+    }
+    .fv{
+        &-wrap{
+            display: block;
+            height: auto;
+            position: relative;
+            padding-top: aspect-ratio(1065, 700);
+            border: 1px solid $gray;
+            box-shadow: rem(10px) rem(15px) rem(35px) 0 rgba($black, 15%);
+            @include imgFit();
+            @include respond-below(sm) {
+                padding-top: aspect-ratio(325, 325);
+            }
+            &::after{
+                @include icon('\e90c');
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: rem(47px);
+                color: $white;
+                transition: 0.3s;
+            }
+            &:hover, &:focus {
+                &:after {
+                    transform: translate(-50%, -50%) scale(1.2);
+                }
+            }
+        }
+    }
+    &.-small{
+        max-width: rem(750px);
+        margin-left: auto;
+        margin-right: auto;
+
+        .fv-wrap{
+            padding-top: aspect-ratio(750, 400);
+            @include respond-below(sm) {
+                padding-top: aspect-ratio(325, 325);
+            }
+        }
+    }
+}

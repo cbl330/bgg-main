@@ -1,0 +1,23 @@
+{
+    "name": "bgg-reviews-slider",
+    "title": "BGG - Reviews Slider",
+    "description": "A slider block to show customer reviews",
+    "style": [
+        "file:./bgg-reviews-slider.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "testimonial",
+    "keywords": [
+        "review",
+        "testimonial",
+        "content"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-reviews-slider.php"
+    }
+}

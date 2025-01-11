@@ -1,0 +1,23 @@
+{
+    "name": "bgg-media-content",
+    "title": "BGG - Media/Content",
+    "description": "A block for alternating media and content",
+    "style": [
+        "file:./bgg-media-content.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "align-pull-right",
+    "keywords": [
+        "media",
+        "content",
+        "layout"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-media-content.php"
+    }
+}

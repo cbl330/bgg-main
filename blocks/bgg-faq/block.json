@@ -1,0 +1,23 @@
+{
+    "name": "bgg-faq",
+    "title": "BGG - FAQ",
+    "description": "FAQ Accordion",
+    "style": [
+        "file:./bgg-faq.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "list-view",
+    "keywords": [
+        "faq",
+        "content",
+        "list"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-faq.php"
+    }
+}

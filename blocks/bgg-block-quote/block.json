@@ -1,0 +1,24 @@
+{
+    "name": "bgg-block-quote",
+    "title": "BGG - Block Quote",
+    "description": "A block for a block quote",
+    "style": [
+        "file:./bgg-block-quote.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "editor-quote",
+    "keywords": [
+        "block quote",
+        "quote",
+        "text",
+        "content"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-block-quote.php"
+    }
+}

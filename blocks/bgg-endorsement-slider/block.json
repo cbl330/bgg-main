@@ -1,0 +1,22 @@
+{
+"name": "bgg-endorsement-slider",
+    "title": "BGG - Endorsement Slider",
+    "description": "A slider block of endorsements",
+    "style": [
+        "file:./bgg-endorsement-slider.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "slides",
+    "keywords": [
+        "slide",
+        "endorsement"
+    ],
+    "postTypes": [
+        "post",
+        "people"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-endorsement-slider.php"
+    }
+}

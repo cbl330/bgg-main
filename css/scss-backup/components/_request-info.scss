@@ -1,0 +1,84 @@
+.request-info{
+    position: relative;
+    overflow: hidden;
+    @include respond-below(lg){
+        padding-top: rem(90px);
+    }
+    h2, .h2 {
+        @include respond-below(xl) {
+            font-size: rem(24px);
+        }
+    }
+    .ri2{
+        &-container{
+            max-width: rem(1100px);
+            .ri-form {
+                @include respond-below(lg) {
+                    display: block;
+                }
+            }
+            > .row {
+                margin-left: rem(-50px);
+                margin-right: rem(-50px);
+                > [class*=cell-] {
+                    padding-left: rem(50px);
+                    padding-right: rem(50px);
+                }
+            }
+        }
+    }
+    .ri{
+        &-wrap {
+            position: relative;
+            background-color: $primary-200;
+        }
+        &-bg{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            @include imgFit();
+        }
+        &-img {
+            img{
+                @include respond-below(lg) {
+                    display: block;
+                    max-width: rem(133px);
+                    width: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: rem(-120px);
+                }
+            }
+        }
+        &-content{
+            @include respond-below(lg) {
+                text-align: center;
+            }
+            p {
+                font-weight: 700;
+            }
+        }
+        &-form{
+            @include respond-below(lg) {
+                display: none;
+            }
+            p{
+                font-size: rem(10px);
+                @include respond-above(xl) {
+                    opacity: 50%;
+                }
+            }
+            input[type="submit"] {
+                width: 100%;
+            }
+        }
+    }
+    .btn {
+        display: block;
+        @include respond-above(lg) {
+            display: none;
+        }
+    }
+}

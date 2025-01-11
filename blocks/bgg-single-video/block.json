@@ -1,0 +1,22 @@
+{
+    "name": "bgg-single-video",
+    "title": "BGG - Single Video",
+    "description": "A block to show a single video",
+    "style": [
+        "file:./bgg-single-video.css"
+    ],
+    "category": "bgg-blocks",
+    "icon": "video-alt3",
+    "keywords": [
+        "single",
+        "video"
+    ],
+    "postTypes": [
+        "post",
+        "page"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "bgg-single-video.php"
+    }
+}

@@ -1,0 +1,41 @@
+.full-video {
+    .fv{
+        &-wrap{
+            display: block;
+            position: relative;
+            padding-top: aspect-ratio(1065, 450);
+            border: 1px solid $gray;
+            box-shadow: rem(10px) rem(15px) rem(35px) 0 rgba($black, 15%);
+            @include imgFit();
+            @include respond-below(sm) {
+                padding-top: aspect-ratio(325, 325);
+            }
+            &::after{
+                @include icon('\e90c');
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: rem(47px);
+                color: $white;
+                transition: 0.3s;
+            }
+            &:hover, &:focus {
+                &:after {
+                    transform: translate(-50%, -50%) scale(1.2);
+                }
+            }
+        }
+    }
+    &.-small{
+        max-width: rem(750px);
+        margin-left: auto;
+        margin-right: auto;
+        .fv-wrap{
+            padding-top: aspect-ratio(750, 400);
+            @include respond-below(sm) {
+                padding-top: aspect-ratio(325, 325);
+            }
+        }
+    }
+}
